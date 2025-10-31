@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#left-panel {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 3cm;
+}
+
+#title {
+  font-weight: bolder;
+  font-size: 1.5cm;
+  color: black;
+  margin-bottom: 0.5cm;
+}
+
+#parah {
+  font-weight: bold;
+  font-size: 0.6cm;
+  color: black;
+  margin-bottom: 0.5cm;
+  margin-left: 120px;
+}
+
+#lives {
+  font-size: 1.1cm;
+  font-weight: bold;
+  color: black;
+}
+
+#right-panel {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin: 30px auto;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5cm;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.flipped {
+  background-color: bisque;
+}
+
+#lost {
+  margin-top: 2cm;
+  font-size: 0.8cm;
+  font-weight: bolder;
+  display: none;
+  text-align: center;
+  color: red;
+}
+
+#won {
+  margin-top: 2cm;
+  font-size: 0.8cm;
+  font-weight: bolder;
+  display: none;
+  text-align: center;
+  color: black;
+}
+
+#tryAgain,
+#winAgain {
+  margin: 2cm auto 0 auto;
+  margin-top: 1.5cm;
+  display: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
