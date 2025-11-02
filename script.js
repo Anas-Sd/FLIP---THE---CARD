@@ -1,5 +1,6 @@
 const gameArea = document.getElementById("game")
 const displayLives = document.getElementById("lives")
+const displayScore = document.getElementById("score")
 const displayLost = document.getElementById("lost")
 const displayWon = document.getElementById("won");
 const tryAgain = document.getElementById("tryAgain")
@@ -9,6 +10,8 @@ let livesLeft = 10;
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
+let score = 0;
+let streak = 0; // consecutive correct matches counter
 
 const cardSymbols = ['🦍', '🦣', '🐲', '🐦‍🔥', '🐪', '🦥', '🦖', '🦬', '🦕', '🐳'];
 let cardValues=[]
@@ -24,6 +27,10 @@ function startAgain(){
 
     livesLeft=10
     displayLives.textContent=`Lifes : ${livesLeft}`
+    // reset scoring for a fresh game
+    score = 0
+    streak = 0
+    if (displayScore) displayScore.textContent = `Score : ${score}`
     firstCard=null
     secondCard=null
     lockBoard=false
@@ -69,6 +76,11 @@ function checkIFMatch() {
 function disableCards() {
     firstCard.removeEventListener("click", flipCard)
     secondCard.removeEventListener("click", flipCard)
+    // It's a correct match: update streak and score
+    streak += 1
+    score += streak
+    if (displayScore) displayScore.textContent = `Score : ${score}`
+
     resetBoard()
 
     if (document.querySelectorAll('.card.flipped').length === cardValues.length)
@@ -86,6 +98,8 @@ function unFlipCards() {
         secondCard.textContent = ""
         resetBoard()
     }, 850)
+    // mismatch: reset streak so next correct match starts at +1
+    streak = 0
     if (livesLeft === 0)
         endGame(false)
 }

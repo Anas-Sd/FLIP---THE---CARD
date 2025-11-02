@@ -41,6 +41,13 @@ body {
   color: black;
 }
 
+#score {
+  font-size: 1.1cm;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;
+}
+
 #right-panel {
   width: 60%;
   display: flex;
