@@ -9,19 +9,45 @@
 </head>
 
 <body>
-    <div id="left-panel">
-        <div id="title">Flip the Cards</div>
-        <p id="parah">Test your Memory</p>
-    </div>
-    <div id="right-panel">
-        <div id="lives"> Lifes Left : 10</div>
-        <div id="score">Score : 0</div>
-        <div id="game"></div>
-        <div id="lost"> 👎 Oh Noo!! You have a weak Memory</div>
-        <button id="tryAgain">Test Your Memory Again? 🤔</button>
-        <div id="won"> 👑 Bravo! You have an amazing memory</div>
-        <button id="winAgain">Make your Friend Loose Again ! 😉</button>
-    </div>
+        <div id="main-content">
+                <div id="left-panel">
+                        <div id="title">Flip the Cards</div>
+                        <p id="parah">Test your Memory</p>
+                        <button id="rulesBtn" class="rules-button">Game Rules</button>
+                </div>
+                <div id="right-panel">
+                        <div id="lives"> Lifes Left : 10</div>
+                        <div id="score">Score : 0</div>
+                        <div id="game"></div>
+                        <div id="lost"> 👎 Oh Noo!! You have a weak Memory</div>
+                        <button id="tryAgain">Test Your Memory Again? 🤔</button>
+                        <div id="won"> 👑 Bravo! You have an amazing memory</div>
+                        <button id="winAgain">Make your Friend Loose Again ! 😉</button>
+                </div>
+        </div>
+
+        <!-- Rules modal overlay -->
+        <div id="rulesOverlay" class="modal-overlay" style="display:none;" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+                <button id="closeRules" class="close-btn" aria-label="Close rules">&times;</button>
+                <h2 id="rulesTitle">Game Rules</h2>
+
+                <div class="rules-section">
+                    <h3>1. Basic Game Rules</h3>
+                    <p>You will be Flipping 2 cards each turn. If the symbols match, the pair stays revealed. If not they will be flipped back. Match all pairs to win.</p>
+                </div>
+
+                <div class="rules-section">
+                    <h3>2. How Lifes Work</h3>
+                    <p>You start with 10 lifes. Each time you flip two non-matching cards, you lose one life. For a correct match the lifes are gonna remain same. When lives reach 0 the game ends.</p>
+                </div>
+
+                <div class="rules-section">
+                    <h3>3. How Score Works</h3>
+                    <p>Each correct match increases your streak. The score gained equals the current streak value: first consecutive match +1, next consecutive +2, then +3, etc. A mismatch resets the streak so the next correct match starts at +1 again.</p>
+                </div>
+            </div>
+        </div>
     <script src="script.js"></script>
 </body>
 

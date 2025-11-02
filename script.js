@@ -5,6 +5,9 @@ const displayLost = document.getElementById("lost")
 const displayWon = document.getElementById("won");
 const tryAgain = document.getElementById("tryAgain")
 const winAgain = document.getElementById("winAgain")
+const rulesBtn = document.getElementById("rulesBtn")
+const rulesOverlay = document.getElementById("rulesOverlay")
+const closeRulesBtn = document.getElementById("closeRules")
 
 let livesLeft = 10;
 let firstCard = null;
@@ -121,4 +124,34 @@ function endGame(isWin) {
 }
 winAgain.addEventListener("click",startAgain)
 tryAgain.addEventListener("click",startAgain)
+
+// Rules modal behaviors
+function openRules(){
+    if (rulesOverlay){
+        rulesOverlay.style.display = 'flex'
+        rulesOverlay.setAttribute('aria-hidden','false')
+    }
+    const main = document.getElementById('main-content')
+    if (main) main.classList.add('blurred')
+}
+function closeRules(){
+    if (rulesOverlay){
+        rulesOverlay.style.display = 'none'
+        rulesOverlay.setAttribute('aria-hidden','true')
+    }
+    const main = document.getElementById('main-content')
+    if (main) main.classList.remove('blurred')
+}
+
+if (rulesBtn) rulesBtn.addEventListener('click', openRules)
+if (closeRulesBtn) closeRulesBtn.addEventListener('click', closeRules)
+// close when clicking outside modal
+if (rulesOverlay) rulesOverlay.addEventListener('click', (e)=>{
+    if (e.target === rulesOverlay) closeRules()
+})
+// close on Esc
+document.addEventListener('keydown', (e)=>{
+    if (e.key === 'Escape') closeRules()
+})
+
 startAgain();
