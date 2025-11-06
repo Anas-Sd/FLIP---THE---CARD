@@ -11,6 +11,29 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+#name{
+display: flex;
+margin-left: 20px ;
+margin-top: 15px;
+font-size: 1.3cm;
+font-weight: black;
+}
+
+/* Top-left logo */
+#logo{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1100;
+  pointer-events: none;
+  display: flex;
+}
+#logo img{ 
+  display: block;
+  width: 80px;
+  height: auto; 
+}
+
 /* Keep left and right panels side-by-side by making main-content a flex container */
 #main-content{
   display: flex;
@@ -29,28 +52,28 @@ body {
 }
 
 #title {
-  font-weight: bolder;
-  font-size: 1.5cm;
+  font-weight: bold;
+  font-size: 1.2cm;
   color: black;
   margin-bottom: 0.5cm;
 }
 
 #parah {
   font-weight: bold;
-  font-size: 0.6cm;
+  font-size: 0.5cm;
   color: black;
   margin-bottom: 0.5cm;
-  margin-left: 120px;
+  margin-left: 85px;
 }
 
 #lives {
-  font-size: 1.1cm;
+  font-size: 0.9cm;
   font-weight: bold;
   color: black;
 }
 
 #score {
-  font-size: 1.1cm;
+  font-size: 0.9cm;
   font-weight: bold;
   color: black;
   margin-top: 10px;
@@ -58,7 +81,7 @@ body {
 
 .rules-button{
   margin-top: 12px;
-  margin-left: 170px;
+  margin-left: 118px;
   padding: 8px 14px;
   font-size: 16px;
   border-radius: 8px;
