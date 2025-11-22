@@ -169,6 +169,7 @@ body {
   body {
     flex-direction: column;
     height: auto;
+    
   }
 
   #main-content {
@@ -200,6 +201,7 @@ body {
   #right-panel {
     width: 100%;
     margin-top: 20px;
+    
   }
 
   #lives, #score {
@@ -207,15 +209,22 @@ body {
   }
 
   #game {
-    grid-template-columns: repeat(4, 90px);
-    gap: 10px;
-  }
+  width: 100%;
+  max-width: 360px;
+  margin: 15px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
 
   .card {
-    width: 90px;
-    height: 90px;
-    font-size: 40px;
-  }
+  width: 65px;
+  height: 65px;
+  aspect-ratio: 1 / 1;
+}
+
 
   #name {
     font-size: 26px;
@@ -238,3 +247,4 @@ body {
     justify-content: center;
   }
 }
+
