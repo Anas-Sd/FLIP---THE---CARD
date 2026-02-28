@@ -25,21 +25,7 @@
 
 Flip two cards at a time, find all matching pairs, and try not to run out of lives!
 
-```javascript
-const flip2win = {
-    type: "Memory Card Game",
-    stack: ["HTML5", "CSS3", "Vanilla JavaScript"],
-    mechanics: ["Flip", "Match", "Score", "Survive"],
-    status: "🟢 Live",
-    funFactor: "∞"
-};
 
-while (lives > 0) {
-  flip(card1);
-  flip(card2);
-  card1 === card2 ? score++ : lives--;
-}
-```
 
 ---
 
