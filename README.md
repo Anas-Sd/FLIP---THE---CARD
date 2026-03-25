@@ -6,7 +6,7 @@
 
 [![Live Demo](https://img.shields.io/badge/🎮_Play_Now-Flip2Win-F59E0B?style=for-the-badge)](https://flip2win.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/Anas-Sd/Flip-2-Win?style=for-the-badge&color=gold)](https://github.com/Anas-Sd/Flip-2-Win)
+[![GitHub Stars](https://img.shields.io/github/stars/Anas-Sd/Flip-2-Win?style=for-the-badge&color=gold)](https://github.com/Anas-Sd/Flip---2---Win)
 
 > Flip the cards. Match the pairs. Test your memory. 🧠
 
@@ -188,7 +188,7 @@ Contributions are welcome!
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-syedanas.me-00D9FF?style=for-the-badge)](https://syedanas.me)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-syedanas)
-[![Gmail](https://img.shields.io/badge/Gmail-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anasannu44455@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sdanasbtech@gmail.com)
 
 </div>
 
